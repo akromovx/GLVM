@@ -1,4 +1,4 @@
-![Alt text](logo/glvm-logo.png)
+![Alt text](logo/figma_frame_glvm.png)
 
 # Game Loop Versatile Modules (GLVM)
 
