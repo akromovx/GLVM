@@ -1,0 +1,29 @@
+name: Ubuntu CI (Build only)
+
+on:
+  push:
+    branches: [ "main" ]
+  pull_request:
+    branches: [ "main" ]
+
+jobs:
+  build:
+
+    runs-on: ubuntu-latest
+
+    steps:
+    - uses: actions/checkout@v3
+    - name: Check Directory
+      run: ls -l -a
+    - name: Istall Dependencies
+      run: apt install libx11-dev \
+              libxi-dev \
+              libxrandr-dev
+              libgl1-mesa-dev \
+              libasound2-dev \
+              libpulse-dev \
+              libudev-dev \
+              clang \
+              make
+    - name: Build GLVM with make
+      run: make -f MakefileLin
