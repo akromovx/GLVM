@@ -15,15 +15,5 @@ jobs:
     - uses: actions/checkout@v3
     - name: Check Directory
       run: ls -l -a
-    - name: Istall Dependencies
-      run: sudo apt update && sudo apt install aptitude && sudo aptitude install libx11-dev \
-              libxi-dev \
-              libxrandr-dev
-              libgl1-mesa-dev \
-              libasound2-dev \
-              libpulse-dev \
-              libudev-dev \
-              clang \
-              make
     - name: Build GLVM with make
       run: make -f MakefileLin
