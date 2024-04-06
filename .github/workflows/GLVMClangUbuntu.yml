@@ -16,7 +16,7 @@ jobs:
     - name: Check Directory
       run: ls -l -a
     - name: Istall Dependencies
-      run: sudo apt update && sudo apt install libx11-dev \
+      run: sudo apt update && sudo apt install aptitude && sudo aptitude install libx11-dev \
               libxi-dev \
               libxrandr-dev
               libgl1-mesa-dev \
